@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
         />
       )}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/20 to-primary/80" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <motion.h1
