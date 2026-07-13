@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             className="flex items-center gap-6"
           >
             <a
-              href="https://github.com"
+              href="https://github.com/Jabanto"
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary hover:text-text-primary transition-colors"
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/jordan-abanto-38400752/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary hover:text-text-primary transition-colors"
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
               <Linkedin size={20} />
             </a>
             <a
-              href="mailto:jordan@example.com"
+              href="mailto:jabanto.witron@emailhub.kr"
               className="text-text-secondary hover:text-text-primary transition-colors"
               aria-label="Email"
             >

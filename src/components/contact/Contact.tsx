@@ -19,7 +19,9 @@ const Contact: React.FC = () => {
             I typically respond within 24-48 hours.
           </p>
           <motion.a
-            href="mailto:jordan@example.com"
+            href="https://calendar.app.google/6UCWf4FgBegWnLiB9"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(34, 211, 238, 0.4)' }}
             whileTap={{ scale: 0.98 }}
             className="inline-flex items-center gap-3 bg-accent text-primary font-inter font-medium px-8 py-4 rounded-lg hover:bg-accent-dark transition-colors"
