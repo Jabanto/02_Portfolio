@@ -25,7 +25,6 @@ const Hero: React.FC = () => {
           muted
           playsInline
           autoPlay
-          loop
           poster={`${process.env.PUBLIC_URL}/hero-frame-1.png`}
         />
       ) : (
@@ -42,7 +41,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-          className="font-grotesk font-bold text-4xl md:text-6xl lg:text-7xl text-text-primary mb-6 tracking-tight"
+          className="font-grotesk font-bold text-4xl md:text-6xl lg:text-7xl text-text-primary mb-9 tracking-tight"
         >
           Engineering intelligence
           <br />
@@ -53,7 +52,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-          className="font-inter text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10"
+          className="font-inter text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-4"
         >
           Full stack software engineer building AI-powered applications,
           enterprise systems, and cloud infrastructure that scale.

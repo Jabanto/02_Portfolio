@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useCallback } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 interface UsePingPongVideoOptions {
   src: string;
@@ -6,12 +6,14 @@ interface UsePingPongVideoOptions {
   autoPlay?: boolean;
   muted?: boolean;
   playsInline?: boolean;
+  pauseDuration?: number;
 }
 
 interface UsePingPongVideoReturn {
   videoRef: React.RefObject<HTMLVideoElement | null>;
   isMobile: boolean;
   shouldUseVideo: boolean;
+  isPaused: boolean;
 }
 
 const shouldSkipVideo = (): boolean => {
@@ -34,10 +36,12 @@ export const usePingPongVideo = ({
   autoPlay = true,
   muted = true,
   playsInline = true,
+  pauseDuration = 7000,
 }: UsePingPongVideoOptions): UsePingPongVideoReturn => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMobile, setIsMobile] = useState<boolean>(shouldSkipVideo());
   const [shouldUseVideo, setShouldUseVideo] = useState<boolean>(!shouldSkipVideo());
+  const [isPaused, setIsPaused] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -54,17 +58,40 @@ export const usePingPongVideo = ({
     const video = videoRef.current;
     if (!video || !shouldUseVideo) return;
 
+    let pauseTimeout: ReturnType<typeof setTimeout>;
+
+    const handleEnded = () => {
+      video.pause();
+      setIsPaused(true);
+
+      pauseTimeout = setTimeout(() => {
+        setIsPaused(false);
+        video.currentTime = 0;
+        video.play().catch(() => {
+          console.log('Auto-play was prevented');
+        });
+      }, pauseDuration);
+    };
+
+    video.addEventListener('ended', handleEnded);
+
     if (autoPlay) {
       video.play().catch(() => {
         console.log('Auto-play was prevented');
       });
     }
-  }, [shouldUseVideo, autoPlay]);
+
+    return () => {
+      video.removeEventListener('ended', handleEnded);
+      clearTimeout(pauseTimeout);
+    };
+  }, [shouldUseVideo, autoPlay, pauseDuration]);
 
   return {
     videoRef,
     isMobile,
     shouldUseVideo,
+    isPaused,
   };
 };
 
