@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const technologies = [
-  'React', 'TypeScript', 'Python', 'Node.js', 
-  'AWS', 'Docker', 'PostgreSQL', 'GraphQL',
-  'Redis', 'Kubernetes', 'Terraform', 'Next.js'
+  'React', 'Python', 
+  'C# / .NET WPF', 'Java & Spring', 'WMS Systems', 'REST & Microservices',
+  'AI-Powered Systems', 'Solutions Architecture', 'Enterprise Integration', 'Quantum Computing (exploring)'
 ];
 
 const stats = [

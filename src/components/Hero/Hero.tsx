@@ -54,8 +54,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
           className="font-inter text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-4"
         >
-          Full stack software engineer building AI-powered applications,
-          enterprise systems, and cloud infrastructure that scale.
+          Formed software engineer & solutions architect building AI-powered applications and enterprise systems that scale.
         </motion.p>
 
         <motion.button
@@ -67,7 +66,7 @@ const Hero: React.FC = () => {
           onClick={scrollToWork}
           className="bg-accent text-primary font-inter font-medium px-8 py-4 rounded-lg hover:bg-accent-dark transition-colors"
         >
-          View My Work
+          My Career Path
         </motion.button>
       </div>
 

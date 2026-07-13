@@ -4,21 +4,21 @@ import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    title: 'AI Document Processor',
-    description: 'Intelligent document parsing system using LLMs to extract structured data from unstructured documents with 95% accuracy.',
-    tags: ['Python', 'OpenAI', 'FastAPI', 'PostgreSQL'],
+    title: 'Building Engineer',
+    description: 'Foundation years: technical drawing, CAD, and project management across interior design, industrial engineering, and public infrastructure — the precision-first mindset that still shapes how I approach software architecture today.',
+    tags: ['AutoCAD', 'Project Management', 'Technical Drawing', 'Industrial Engineering'],
     link: '#',
   },
   {
-    title: 'Enterprise Dashboard',
-    description: 'Real-time analytics dashboard for monitoring KPIs across multiple business units with role-based access control.',
-    tags: ['React', 'TypeScript', 'Node.js', 'Redis'],
+    title: 'Software Engineer',
+    description: 'The pivot into code — from IoT platforms to full lifecycle logistics software, including years embedded in warehouse management systems (WMS) at scale for one of Europe\'s leading logistics automation companies.',
+    tags: ['C# / .NET WPF', 'Java & Spring', 'WMS Systems', 'REST & Microservices'],
     link: '#',
   },
   {
-    title: 'Cloud Infrastructure Platform',
-    description: 'Infrastructure-as-code platform automating AWS deployments with built-in security scanning and cost optimization.',
-    tags: ['AWS', 'Terraform', 'Docker', 'CI/CD'],
+    title: 'Software Solutions Architect',
+    description: 'Now architecting the next layer: taking everything learned building production WMS and logistics systems, and applying it to AI-powered solutions — with an eye on quantum computing as the frontier that will redefine what "scale" means next.',
+    tags: ['AI-Powered Systems', 'Quantum Computing (exploring)'],
     link: '#',
   },
 ];
