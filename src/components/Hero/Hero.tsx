@@ -20,18 +20,18 @@ const Hero: React.FC = () => {
       {shouldUseVideo && !isMobile ? (
         <video
           ref={videoRef}
-          src="/hero-transition.mp4"
+          src={`${process.env.PUBLIC_URL}/hero-transition.mp4`}
           className="absolute inset-0 w-full h-full object-cover"
           muted
           playsInline
           autoPlay
           loop
-          poster="/hero-frame-1.png"
+          poster={`${process.env.PUBLIC_URL}/hero-frame-1.png`}
         />
       ) : (
         <div 
           className="absolute inset-0 w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: 'url(/hero-frame-1.png)' }}
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/hero-frame-1.png)` }}
         />
       )}
 
