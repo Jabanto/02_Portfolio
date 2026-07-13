@@ -25,6 +25,7 @@ const Hero: React.FC = () => {
           muted
           playsInline
           autoPlay
+          loop
           poster="/hero-frame-1.png"
         />
       ) : (
